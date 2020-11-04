@@ -73,7 +73,7 @@ function processFile(input, output, file) {
 	// connected component analysis, filter clusters by size, only keep ROIs up to 4 um^2
 	run("Analyze Particles...", "size=0.00-4.00 show=Outlines clear exclude add");
 	//save set of ROIs up to 4 um^2
-	roiManager("Save", results_directory + File.separator + Image_Title_Without_Extension + "-selected-clusteres-ROI-set.zip");
+	roiManager("Save", results_directory + File.separator + Image_Title_Without_Extension + "-selected-clusters-ROI-set.zip");
 
 	// delete intensities outside of the ROIs of up to 4 um^2
 	selectWindow(Maximum_Intensity_Projection_Image);
